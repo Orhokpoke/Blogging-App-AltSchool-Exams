@@ -95,8 +95,39 @@ const updateBlog = async (req, res) => {
   }
 }
 
-const deleteAllBlog = async (req, res) => {}
-const deleteOneBlog = async (req, res) => {}
+const deleteAllBlog = async (req, res) => {
+  const deletedResult = await Blog.deleteMany({})
+  if (deletedResult.deletedCount == 0)
+    return res.status(200).json({ message: message.notFoundMessage })
+
+  if (deletedResult.deletedCount > 0) {
+    logEvents(
+      'blog.txt',
+      `Deleted(${req.method}): \t ${deletedResult.deletedCount} records have been deleted\t ${req.url}\t${req.headers.origin}`
+    )
+    return res.status(200).json({
+      message: `${deletedResult.deletedCount} records have been deleted!`,
+    })
+  }
+}
+const deleteOneBlog = async (req, res) => {
+  const { title } = req.body
+  if (!title) return res.status(400).json({ message: message.requiredMessage })
+  const foundResult = await Blog.findOne({ title }).exec()
+
+  if (!foundResult) {
+    return res.status(400).json({ message: 'Blog not found!' })
+  }
+
+  const deletedResult = await foundResult.deleteOne()
+  if (deletedResult) {
+    logEvents(
+      'blog.txt',
+      `Deleted(${req.method}): \t Title: ${foundResult.title}\t Desc: ${foundResult.description}\t ${req.url}\t${req.headers.origin}`
+    )
+    return res.status(200).json({ message: `${title} has been deleted!` })
+  }
+}
 
 module.exports = {
   getAllMyBlog,
