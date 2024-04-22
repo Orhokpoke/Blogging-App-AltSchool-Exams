@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="author" content="Emmanuel Orhokpoke" />
+    <meta
+      name="description"
+      content="AltSchool Assignment 2 - A Sign up page" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/Logo.jpg" />
+  </head>
+  <body>
+    <main>
+      <section class="mobileStatusBar">
+        <div class="time">
+          <p>9:41</p>
+        </div>
+        <div class="battery"><img src="img/Battery.jpg" alt="" /></div>
+      </section>
+      <section class="brand">
+        <div class="logo">
+          <img src="img/Logo.jpg" alt="Logo" width="146" height="150" />
+        </div>
+        <h1>For Individuals</h1>
+        <p class="desktop-text">
+          Start benefiting from the wellness experience. For companies looking
+          on increasing productivity, and improving organization wellness.
+        </p>
+        <p class="mobile-text">
+          Inspiring wholesome harmony for the mind, body and spirit, for
+          everyone, everywhere.
+        </p>
+      </section>
+      <section class="register-form">
+        <form action="post">
+          <div class="innerContainer">
+            <p>
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="Tolu"
+                autofocus />
+            </p>
+            <p>
+              <label for="lastName">Last Name</label>
+              <input type="text" name="lastName" id="lastName" />
+            </p>
+          </div>
+          <div class="innerContainer">
+            <p>
+              <label for="gender">Gender</label>
+              <select name="gender" id="gender">
+                <option value="" selected disabled>Select here</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+              </select>
+            </p>
+            <p>
+              <label for="dob">Date of Birth</label>
+              <input type="date" name="dob" id="dob" />
+            </p>
+          </div>
+          <div class="innerContainer">
+            <p>
+              <label for="weight">Weight (KG)</label>
+              <input
+                type="text"
+                name="weight"
+                id="weight"
+                placeholder="Enter Weight" />
+            </p>
+            <p>
+              <label for="height">Height (CM)</label>
+              <input
+                type="text"
+                name="height"
+                id="height"
+                placeholder="Enter height here" />
+            </p>
+          </div>
+          <div class="innerContainer">
+            <p class="fullContainer">
+              <label for="activity">Activity Level</label>
+              <select name="activity" id="activity">
+                <option value="" selected disabled>Select here</option>
+                <option value="one">Activity One</option>
+                <option value="two">Activity Two</option>
+              </select>
+            </p>
+          </div>
+          <div class="innerContainer">
+            <p class="fullContainer password">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" />
+            </p>
+            <!-- <i class="fa-regular fa-eye"></i> -->
+          </div>
+          <div class="innerContainer">
+            <button type="submit">Register</button>
+          </div>
+        </form>
+        <p class="footer">
+          By clicking Register, you agree to our
+          <a href="#" target="_blank">Terms of Use</a> and our
+          <a href="#" target="_blank">Privacy Policy</a>
+        </p>
+      </section>
+      <section>
+        <p class="footer">
+          By clicking Register, you agree to our
+          <a href="#" target="_blank">Terms of Use</a> and our
+          <a href="#" target="_blank">Privacy Policy</a>
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

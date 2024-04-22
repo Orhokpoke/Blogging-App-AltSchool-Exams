@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Border: 2px solid red;
+  --BgColor: rgba(46, 196, 181, 0.04);
+  --Green: #2ec4b6;
+  --TextColor: #737373;
+  --Center: center;
+}
+
+body {
+  background: var(--BgColor);
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main section:first-child {
+  display: none;
+}
+
+.brand {
+  max-width: 460px;
+  height: 275px;
+  margin: 0 auto;
+  font-family: 'Sofia Sans', sans-serif;
+}
+
+.logo {
+  width: 77.33px;
+  height: 80px;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.1));
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 50px 0px 20px;
+  color: #000b0a;
+  line-height: 50px;
+  letter-spacing: -0.8px;
+}
+
+.desktop-text {
+  padding: 0.2em;
+  line-height: 25px;
+  color: var(--TextColor);
+}
+
+.mobile-text {
+  display: none;
+  padding: 0.2em;
+  line-height: 25px;
+  color: var(--TextColor);
+}
+
+.register-form {
+  margin: 0 auto;
+  font-family: 'Sofia Sans', sans-serif;
+  width: 580px;
+  max-width: 50%;
+  min-height: 80%;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0px 4px 50px 0px rgba(4, 8, 19, 0.1);
+}
+
+.register-form form {
+  padding: 2.5rem 2.5rem 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.innerContainer {
+  width: 100%;
+  margin: 0 auto 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.register-form form p {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+  color: #011c34;
+  height: 14px;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: 0.1px;
+  font-family: 'Sofia Pro';
+}
+
+input,
+select {
+  border: 1px solid #f0f0f0;
+  height: 3rem;
+  border-radius: 2px;
+  color: #011c34;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  padding-left: 16px;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid rgba(46, 196, 181, 0.3);
+}
+
+input::placeholder,
+select:has(> option[value='']:checked) {
+  color: #737373;
+}
+
+.register-form form .fullContainer {
+  width: 100%;
+}
+
+.innerContainer:last-child {
+  margin: 0;
+}
+
+button {
+  width: 100%;
+  height: 3rem;
+  background-color: #2ec4b6;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  filter: drop-shadow(0px 10px 40px rgba(0, 0, 0, 0.1));
+  border: 1px;
+  letter-spacing: 0.2px;
+}
+
+main section:last-child {
+  display: none;
+}
+
+.footer {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+  line-height: 25px;
+}
+
+.footer a {
+  color: var(--Green);
+}
+
+@media screen and (max-width: 920px) {
+  body {
+    background-color: rgb(247, 253, 252);
+  }
+
+  main {
+    flex-flow: column nowrap;
+  }
+
+  main section:first-child {
+    background: rgba(249, 250, 251, 0);
+    width: 100%;
+    display: inline-flex;
+    padding: 14px 14.5px 12px 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .brand {
+    margin: 2rem 1.5rem 2.5rem;
+  }
+
+  .logo {
+    width: 38.667px;
+    height: 40px;
+  }
+
+  h1 {
+    margin: 2.5rem 0px 0.75rem;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: block;
+    font-weight: 300;
+  }
+
+  .register-form {
+    max-width: 87%;
+    height: 840px;
+    min-height: 70%;
+  }
+
+  .register-form form {
+    padding: 1.5rem 1rem;
+  }
+
+  .innerContainer {
+    flex-flow: column nowrap;
+  }
+
+  .innerContainer:first-child {
+    margin-bottom: 1rem;
+  }
+
+  .register-form form p {
+    width: 100%;
+  }
+
+  main section:nth-child(3) .footer {
+    display: none;
+  }
+
+  main section:last-child {
+    margin: 1rem;
+    display: block;
+    max-width: 84%;
+  }
+}
